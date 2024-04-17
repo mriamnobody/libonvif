@@ -12,6 +12,11 @@ class AlertPanel(QWidget):
         self.mw = mw
         self.layout = QVBoxLayout(self)
 
+        # Keys for settings
+        self.enableAlertKey = "AlertPanel/enableAlert"
+        self.saveImagesKey = "AlertPanel/saveImages"
+        self.savePathKey = "AlertPanel/savePath"
+
         # Telegram alert setup
         self.chkEnableAlert = QCheckBox("Enable alerts on Telegram with the image of detected object")
         self.chkEnableAlert.stateChanged.connect(self.enableAlertChanged)
